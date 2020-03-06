@@ -10,8 +10,25 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, World!")
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
+        
+        GeometryReader {reader in
+           
+            ZStack {
+                LinearGradient(
+                    gradient:
+                    Gradient(
+                        colors: [
+                            Color("StartGradient"),
+                            Color("EndGradient")
+                    ]),
+                    startPoint: .top,
+                    endPoint: .bottom
+                )
+                Color(.red)
+                Color(.blue)
+            }
+        }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
     }
 }
 
