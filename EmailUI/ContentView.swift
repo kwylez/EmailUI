@@ -14,18 +14,11 @@ struct ContentView: View {
         GeometryReader {reader in
            
             ZStack {
-                LinearGradient(
-                    gradient:
-                    Gradient(
-                        colors: [
-                            Color("StartGradient"),
-                            Color("EndGradient")
-                    ]),
-                    startPoint: .top,
-                    endPoint: .bottom
-                )
-                Color(.red)
-                Color(.blue)
+                HStack(spacing: 0) {
+                    LeftView()
+                    RightView()
+                        .frame(width: reader.size.width * 0.55)
+                }
             }
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
