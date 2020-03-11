@@ -9,22 +9,94 @@
 import SwiftUI
 
 struct LeftView: View {
+    
     var body: some View {
         
-        GeometryReader {reader in
-            
-             ZStack {
-                 LinearGradient(
-                     gradient:
-                     Gradient(
-                         colors: [
-                             Color("StartGradient"),
-                             Color("EndGradient")
-                     ]),
-                     startPoint: .top,
-                     endPoint: .bottom
-                 )
-             }
+         ZStack {
+             LinearGradient(
+                 gradient:
+                 Gradient(
+                     colors: [
+                         Color("StartGradient"),
+                         Color("EndGradient")
+                 ]),
+                 startPoint: .top,
+                 endPoint: .bottom
+             )
+
+            HStack(alignment: .top) {
+                
+                VStack(alignment: .leading, spacing: 0) {
+                    ZStack {
+                        Rectangle()
+                            .foregroundColor(Color("SeletedLeftMenu"))
+                            .frame(height: 64.0)
+                        Image("compose")
+                            .resizable()
+                            .frame(width: 24, height: 24)
+                    }
+                    ZStack {
+                        Rectangle()
+                            .foregroundColor(Color("UnSelectedLeftMenu"))
+                            .frame(height: 64.0)
+                        Image("compose")
+                            .resizable()
+                            .frame(width: 24, height: 24)
+                    }
+                    ZStack {
+                        Rectangle()
+                            .foregroundColor(Color("UnSelectedLeftMenu"))
+                            .frame(height: 64.0)
+                        Image("compose")
+                            .resizable()
+                            .frame(width: 24, height: 24)
+                    }
+                    ZStack {
+                        Rectangle()
+                            .foregroundColor(Color("UnSelectedLeftMenu"))
+                            .frame(height: 64.0)
+                        Image("compose")
+                            .resizable()
+                            .frame(width: 24, height: 24)
+                    }
+                    ZStack {
+                        Rectangle()
+                            .foregroundColor(Color("UnSelectedLeftMenu"))
+                            .frame(height: 64.0)
+                        Image("compose")
+                            .resizable()
+                            .frame(width: 24, height: 24)
+                    }
+                    ZStack {
+                        Rectangle()
+                            .foregroundColor(Color("UnSelectedLeftMenu"))
+                            .frame(height: 64.0)
+                        Image("compose")
+                            .resizable()
+                            .frame(width: 24, height: 24)
+                    }
+                    ZStack {
+                        Rectangle()
+                            .foregroundColor(Color("UnSelectedLeftMenu"))
+                            .frame(height: 64.0)
+                        Image("compose")
+                            .resizable()
+                            .frame(width: 24, height: 24)
+                    }
+                    ZStack {
+                        Rectangle()
+                            .foregroundColor(Color("UnSelectedLeftMenu"))
+                            .frame(height: 64.0)
+                        Image("compose")
+                            .resizable()
+                            .frame(width: 24, height: 24)
+                    }
+                    Spacer()
+                }
+                .frame(width: 64.0)
+                Text("Menu View")
+                Spacer()
+            }
          }
     }
 }

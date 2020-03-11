@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		01542C7D2418023A00294EA8 /* MessageCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01542C7C2418023A00294EA8 /* MessageCategory.swift */; };
+		01542C7F2418629300294EA8 /* PreviewMessageHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01542C7E2418629300294EA8 /* PreviewMessageHeaderView.swift */; };
+		01542C81241862A400294EA8 /* PreviewMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01542C80241862A400294EA8 /* PreviewMessageView.swift */; };
+		01542C83241862B200294EA8 /* PreviewMessageCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01542C82241862B200294EA8 /* PreviewMessageCard.swift */; };
 		015915BE241178D600D7D69A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 015915BD241178D600D7D69A /* AppDelegate.swift */; };
 		015915C0241178D600D7D69A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 015915BF241178D600D7D69A /* ContentView.swift */; };
 		015915C2241178D600D7D69A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 015915C1241178D600D7D69A /* Assets.xcassets */; };
@@ -17,6 +21,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		01542C7C2418023A00294EA8 /* MessageCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCategory.swift; sourceTree = "<group>"; };
+		01542C7E2418629300294EA8 /* PreviewMessageHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewMessageHeaderView.swift; sourceTree = "<group>"; };
+		01542C80241862A400294EA8 /* PreviewMessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewMessageView.swift; sourceTree = "<group>"; };
+		01542C82241862B200294EA8 /* PreviewMessageCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewMessageCard.swift; sourceTree = "<group>"; };
 		015915BA241178D600D7D69A /* EmailUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmailUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		015915BD241178D600D7D69A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		015915BF241178D600D7D69A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -40,6 +48,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		01542C84241862B700294EA8 /* Preview Message */ = {
+			isa = PBXGroup;
+			children = (
+				01542C7E2418629300294EA8 /* PreviewMessageHeaderView.swift */,
+				01542C80241862A400294EA8 /* PreviewMessageView.swift */,
+				01542C82241862B200294EA8 /* PreviewMessageCard.swift */,
+			);
+			path = "Preview Message";
+			sourceTree = "<group>";
+		};
 		015915B1241178D600D7D69A = {
 			isa = PBXGroup;
 			children = (
@@ -63,11 +81,13 @@
 				015915C9241178D600D7D69A /* Info.plist */,
 				015915BD241178D600D7D69A /* AppDelegate.swift */,
 				015915BF241178D600D7D69A /* ContentView.swift */,
-				015A8D432412F7C500418901 /* RightView.swift */,
 				015A8D412412F56900418901 /* LeftView.swift */,
+				01542C7C2418023A00294EA8 /* MessageCategory.swift */,
+				015A8D432412F7C500418901 /* RightView.swift */,
 				015915C1241178D600D7D69A /* Assets.xcassets */,
 				015915C6241178D600D7D69A /* Main.storyboard */,
 				015915C3241178D600D7D69A /* Preview Content */,
+				01542C84241862B700294EA8 /* Preview Message */,
 			);
 			path = EmailUI;
 			sourceTree = "<group>";
@@ -155,6 +175,10 @@
 				015915BE241178D600D7D69A /* AppDelegate.swift in Sources */,
 				015A8D422412F56900418901 /* LeftView.swift in Sources */,
 				015A8D442412F7C500418901 /* RightView.swift in Sources */,
+				01542C83241862B200294EA8 /* PreviewMessageCard.swift in Sources */,
+				01542C7F2418629300294EA8 /* PreviewMessageHeaderView.swift in Sources */,
+				01542C81241862A400294EA8 /* PreviewMessageView.swift in Sources */,
+				01542C7D2418023A00294EA8 /* MessageCategory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

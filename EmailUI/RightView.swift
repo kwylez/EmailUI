@@ -22,6 +22,7 @@ struct RightView: View {
                 Spacer()
             }
         }
+        .layoutPriority(1)
         .background(Color.white)
     }
 }

@@ -14,14 +14,13 @@ struct ContentView: View {
         GeometryReader {reader in
            
             ZStack {
-                HStack(spacing: 0) {
+                HStack(alignment: .top, spacing: 0.0) {
                     LeftView()
                     RightView()
-                        .frame(width: reader.size.width * 0.55)
                 }
             }
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
         }
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
     }
 }
 
