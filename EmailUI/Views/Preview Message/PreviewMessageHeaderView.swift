@@ -23,15 +23,18 @@ struct PreviewMessageHeaderView: View {
     
     var body: some View {
         
+        let alignment: VerticalAlignment = headerMeta.subtitle != nil ? .top : .center
         return
-            
-            HStack {
+    
+            HStack(alignment: alignment) {
             
                 headerMeta.image
+                    .colorMultiply(.red)
                 
-                VStack(alignment: .leading) {
+                VStack(alignment: .leading, spacing: 5.0) {
                     
                     Text(headerMeta.category.rawValue)
+                        .bold()
                     if headerMeta.subtitle != nil {
                         Text(headerMeta.subtitle!)
                     }
@@ -39,6 +42,8 @@ struct PreviewMessageHeaderView: View {
                 Spacer()
                 Image("checkmark.circle")
             }
+            .padding()
+            .background(Color("MessageCategoryHeader"))
     }
 }
 

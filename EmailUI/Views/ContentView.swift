@@ -13,11 +13,9 @@ struct ContentView: View {
         
         GeometryReader {reader in
            
-            ZStack {
-                HStack(alignment: .top, spacing: 0.0) {
-                    LeftView()
-                    RightView()
-                }
+            HStack(alignment: .top, spacing: 0.0) {
+                LeftView()
+                RightView()
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
         }
@@ -28,5 +26,6 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+            .frame(width: 1024, height: 768)
     }
 }

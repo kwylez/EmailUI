@@ -94,8 +94,11 @@ struct LeftView: View {
                     Spacer()
                 }
                 .frame(width: 64.0)
-                Text("Menu View")
-                Spacer()
+                ScrollView {
+                    PreviewMessageCard()
+                    PreviewMessageCard()
+                    PreviewMessageCard()
+                }
             }
          }
     }

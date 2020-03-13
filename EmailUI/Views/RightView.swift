@@ -14,15 +14,14 @@ struct RightView: View {
         
         ZStack {
             VStack {
-                Text("This will be header")
-                    .foregroundColor(.black)
+                MessageHeaderView()
                 Text("We're getting married - Ronald and Kelly")
                     .font(.system(.largeTitle))
                     .foregroundColor(.black)
                 Spacer()
             }
         }
-        .layoutPriority(1)
+        .padding()
         .background(Color.white)
     }
 }

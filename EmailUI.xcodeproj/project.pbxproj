@@ -18,6 +18,9 @@
 		015915C8241178D600D7D69A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 015915C6241178D600D7D69A /* Main.storyboard */; };
 		015A8D422412F56900418901 /* LeftView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 015A8D412412F56900418901 /* LeftView.swift */; };
 		015A8D442412F7C500418901 /* RightView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 015A8D432412F7C500418901 /* RightView.swift */; };
+		016954BC2419DE7800F30B6A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 016954BB2419DE7800F30B6A /* User.swift */; };
+		016954BE2419DE7F00F30B6A /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 016954BD2419DE7F00F30B6A /* Message.swift */; };
+		016954C2241B208900F30B6A /* MessageHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 016954C1241B208900F30B6A /* MessageHeaderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +38,9 @@
 		015915CA241178D600D7D69A /* EmailUI.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = EmailUI.entitlements; sourceTree = "<group>"; };
 		015A8D412412F56900418901 /* LeftView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftView.swift; sourceTree = "<group>"; };
 		015A8D432412F7C500418901 /* RightView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RightView.swift; sourceTree = "<group>"; };
+		016954BB2419DE7800F30B6A /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		016954BD2419DE7F00F30B6A /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		016954C1241B208900F30B6A /* MessageHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageHeaderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,14 +86,11 @@
 				015915CA241178D600D7D69A /* EmailUI.entitlements */,
 				015915C9241178D600D7D69A /* Info.plist */,
 				015915BD241178D600D7D69A /* AppDelegate.swift */,
-				015915BF241178D600D7D69A /* ContentView.swift */,
-				015A8D412412F56900418901 /* LeftView.swift */,
-				01542C7C2418023A00294EA8 /* MessageCategory.swift */,
-				015A8D432412F7C500418901 /* RightView.swift */,
 				015915C1241178D600D7D69A /* Assets.xcassets */,
 				015915C6241178D600D7D69A /* Main.storyboard */,
+				016954BF241B1FD100F30B6A /* Models */,
 				015915C3241178D600D7D69A /* Preview Content */,
-				01542C84241862B700294EA8 /* Preview Message */,
+				016954C0241B1FEE00F30B6A /* Views */,
 			);
 			path = EmailUI;
 			sourceTree = "<group>";
@@ -98,6 +101,28 @@
 				015915C4241178D600D7D69A /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		016954BF241B1FD100F30B6A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				01542C7C2418023A00294EA8 /* MessageCategory.swift */,
+				016954BB2419DE7800F30B6A /* User.swift */,
+				016954BD2419DE7F00F30B6A /* Message.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		016954C0241B1FEE00F30B6A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				01542C84241862B700294EA8 /* Preview Message */,
+				016954C1241B208900F30B6A /* MessageHeaderView.swift */,
+				015915BF241178D600D7D69A /* ContentView.swift */,
+				015A8D412412F56900418901 /* LeftView.swift */,
+				015A8D432412F7C500418901 /* RightView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -176,7 +201,10 @@
 				015A8D422412F56900418901 /* LeftView.swift in Sources */,
 				015A8D442412F7C500418901 /* RightView.swift in Sources */,
 				01542C83241862B200294EA8 /* PreviewMessageCard.swift in Sources */,
+				016954BC2419DE7800F30B6A /* User.swift in Sources */,
+				016954C2241B208900F30B6A /* MessageHeaderView.swift in Sources */,
 				01542C7F2418629300294EA8 /* PreviewMessageHeaderView.swift in Sources */,
+				016954BE2419DE7F00F30B6A /* Message.swift in Sources */,
 				01542C81241862A400294EA8 /* PreviewMessageView.swift in Sources */,
 				01542C7D2418023A00294EA8 /* MessageCategory.swift in Sources */,
 			);
