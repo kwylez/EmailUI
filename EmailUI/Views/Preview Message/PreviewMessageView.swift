@@ -13,7 +13,7 @@ struct PreviewMessage: View {
     var body: some View {
         
         HStack(alignment: .top) {
-        
+
             Image("profile")
                 .resizable()
                 .frame(width: 35.0, height: 35.0)

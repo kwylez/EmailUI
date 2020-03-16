@@ -30,21 +30,23 @@ struct PreviewMessageHeaderView: View {
     
             HStack(alignment: alignment) {
             
-                headerMeta.image
-                    .colorMultiply(headerMeta.imageColor)
-                
-                VStack(alignment: .leading, spacing: 5.0) {
+                Group {
+                    headerMeta.image
+                        .colorMultiply(headerMeta.imageColor)
                     
-                    Text(headerMeta.category.rawValue)
-                        .bold()
-                    
-                    if headerMeta.subtitle != nil {
-                        Text(headerMeta.subtitle!)
+                    VStack(alignment: .leading, spacing: 5.0) {
+                        
+                        Text(headerMeta.category.rawValue)
+                            .bold()
+                        
+                        if headerMeta.subtitle != nil {
+                            Text(headerMeta.subtitle!)
+                        }
                     }
+                    Spacer()
+                    Image("checkmark.circle")
+                        .colorMultiply(.gray)
                 }
-                Spacer()
-                Image("checkmark.circle")
-                    .colorMultiply(.gray)
             }
             .padding()
             .background(Color("MessageCategoryHeader"))

@@ -29,7 +29,7 @@ struct LeftView: View {
                 VStack(alignment: .leading, spacing: 0) {
                     ZStack {
                         Rectangle()
-                            .foregroundColor(Color("SeletedLeftMenu"))
+                            .foregroundColor(Color("ComposeLeftMenu"))
                             .frame(height: 64.0)
                         Image("compose")
                             .resizable()
@@ -37,9 +37,9 @@ struct LeftView: View {
                     }
                     ZStack {
                         Rectangle()
-                            .foregroundColor(Color("UnSelectedLeftMenu"))
+                            .foregroundColor(Color("SelectedLeftMenu"))
                             .frame(height: 64.0)
-                        Image("compose")
+                        Image("menu.unread")
                             .resizable()
                             .frame(width: 24, height: 24)
                     }
@@ -47,7 +47,7 @@ struct LeftView: View {
                         Rectangle()
                             .foregroundColor(Color("UnSelectedLeftMenu"))
                             .frame(height: 64.0)
-                        Image("compose")
+                        Image("menu.pin")
                             .resizable()
                             .frame(width: 24, height: 24)
                     }
@@ -55,7 +55,7 @@ struct LeftView: View {
                         Rectangle()
                             .foregroundColor(Color("UnSelectedLeftMenu"))
                             .frame(height: 64.0)
-                        Image("compose")
+                        Image("menu.folder")
                             .resizable()
                             .frame(width: 24, height: 24)
                     }
@@ -63,7 +63,7 @@ struct LeftView: View {
                         Rectangle()
                             .foregroundColor(Color("UnSelectedLeftMenu"))
                             .frame(height: 64.0)
-                        Image("compose")
+                        Image("menu.attachment")
                             .resizable()
                             .frame(width: 24, height: 24)
                     }
@@ -71,7 +71,7 @@ struct LeftView: View {
                         Rectangle()
                             .foregroundColor(Color("UnSelectedLeftMenu"))
                             .frame(height: 64.0)
-                        Image("compose")
+                        Image("menu.snooze")
                             .resizable()
                             .frame(width: 24, height: 24)
                     }
@@ -79,7 +79,7 @@ struct LeftView: View {
                         Rectangle()
                             .foregroundColor(Color("UnSelectedLeftMenu"))
                             .frame(height: 64.0)
-                        Image("compose")
+                        Image("menu.layer")
                             .resizable()
                             .frame(width: 24, height: 24)
                     }
@@ -87,7 +87,7 @@ struct LeftView: View {
                         Rectangle()
                             .foregroundColor(Color("UnSelectedLeftMenu"))
                             .frame(height: 64.0)
-                        Image("compose")
+                        Image("menu.users")
                             .resizable()
                             .frame(width: 24, height: 24)
                     }
