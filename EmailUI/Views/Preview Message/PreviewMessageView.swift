@@ -27,6 +27,7 @@ struct PreviewMessage: View {
             }
             Spacer()
             Text("Yesterday")
+                .foregroundColor(.gray)
         }
         .padding()
         .background(Color("MessagePreview"))

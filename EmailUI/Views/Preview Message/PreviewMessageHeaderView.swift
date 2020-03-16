@@ -15,6 +15,8 @@ struct PreviewHeaderMeta {
     let category: MessageCategory
     
     let subtitle: String?
+    
+    let imageColor: Color
 }
 
 struct PreviewMessageHeaderView: View {
@@ -29,18 +31,20 @@ struct PreviewMessageHeaderView: View {
             HStack(alignment: alignment) {
             
                 headerMeta.image
-                    .colorMultiply(.red)
+                    .colorMultiply(headerMeta.imageColor)
                 
                 VStack(alignment: .leading, spacing: 5.0) {
                     
                     Text(headerMeta.category.rawValue)
                         .bold()
+                    
                     if headerMeta.subtitle != nil {
                         Text(headerMeta.subtitle!)
                     }
                 }
                 Spacer()
                 Image("checkmark.circle")
+                    .colorMultiply(.gray)
             }
             .padding()
             .background(Color("MessageCategoryHeader"))
@@ -55,13 +59,15 @@ struct PreviewMessageHeaderView_Previews: PreviewProvider {
             PreviewMessageHeaderView(headerMeta:
                 PreviewHeaderMeta(image: Image("unread"),
                                   category: MessageCategory.unread,
-                                  subtitle: "skywalker@jedi.com")
+                                  subtitle: "skywalker@jedi.com",
+                                  imageColor: .red)
             )
             
             PreviewMessageHeaderView(headerMeta:
                 PreviewHeaderMeta(image: Image("unread"),
                                   category: MessageCategory.snoozed,
-                                  subtitle: nil)
+                                  subtitle: nil,
+                                  imageColor: .red)
             )
         }
     }

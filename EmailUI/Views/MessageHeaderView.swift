@@ -24,6 +24,7 @@ struct MessageHeaderView: View {
             Spacer()
             Text("Sunday, Feb. 21, 1:09pm")
                 .foregroundColor(.gray)
+                .font(.system(.caption))
         }
         .padding()
     }
