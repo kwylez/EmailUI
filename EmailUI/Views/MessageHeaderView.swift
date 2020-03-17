@@ -10,19 +10,23 @@ import SwiftUI
 
 struct MessageHeaderView: View {
     
+    @Binding var selectedMessage: Message
+    
     var body: some View {
 
         HStack {
         
-            Image("profile")
+            selectedMessage.author.profileImage
                 .resizable()
-                .frame(width: 35.0, height: 35.0)
-                .colorMultiply(.black)
-            Text("Kelly Dorm")
+                .aspectRatio(contentMode: .fit)
+                .clipShape(Circle())
+                .overlay(Circle().stroke(Color("SelectedLeftMenu"), lineWidth: 2))
+                .frame(width: 55.0, height: 55.0)
+            Text(selectedMessage.author.name)
                 .foregroundColor(.black)
                 .bold()
             Spacer()
-            Text("Sunday, Feb. 21, 1:09pm")
+            Text(selectedMessage.friendlyDate)
                 .foregroundColor(.gray)
                 .font(.system(.caption))
         }
@@ -32,6 +36,6 @@ struct MessageHeaderView: View {
 
 struct MessageHeaderView_Previews: PreviewProvider {
     static var previews: some View {
-        MessageHeaderView()
+        MessageHeaderView(selectedMessage: .constant(unreadMessages.first!))
     }
 }

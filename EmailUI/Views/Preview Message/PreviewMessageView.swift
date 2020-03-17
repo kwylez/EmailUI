@@ -12,6 +12,8 @@ struct PreviewMessageView: View {
     
     var message: Message
     
+    @Binding var selectedMessage: Message
+    
     var body: some View {
         
         HStack(alignment: .top) {
@@ -36,6 +38,9 @@ struct PreviewMessageView: View {
         }
         .padding()
         .background(Color("MessagePreview"))
+        .onTapGesture {
+            self.selectedMessage = self.message
+        }
     }
 }
 
@@ -48,6 +53,6 @@ struct PreviewMessage_Previews: PreviewProvider {
                 User(name: "Mara Jade", profileImage: Image("profile.1")),
                     subject: "Legends",
                     createdDate: Date(),
-                    text: "May the Force be with you"))
+                    text: "May the Force be with you"), selectedMessage: .constant(unreadMessages.first!))
     }
 }

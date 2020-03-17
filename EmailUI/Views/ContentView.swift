@@ -10,11 +10,13 @@ import SwiftUI
 
 struct ContentView: View {
     
+    @State var selectedMessage: Message = unreadMessages.first!
+    
     var body: some View {
         
         HStack(alignment: .top, spacing: 0.0) {
-            LeftView()
-            RightView()
+            LeftView(selectedMessage: $selectedMessage)
+            RightView(selectedMessage: $selectedMessage)
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
     }

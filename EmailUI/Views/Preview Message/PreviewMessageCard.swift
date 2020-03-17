@@ -12,6 +12,8 @@ struct PreviewMessageCard: View {
     
     var headerMeta: PreviewHeaderMeta
     
+    @Binding var selectedMessage: Message
+    
     var body: some View {
 
         VStack(alignment: .leading, spacing: 0) {
@@ -19,7 +21,7 @@ struct PreviewMessageCard: View {
             PreviewMessageHeaderView(headerMeta: self.headerMeta)
         
             ForEach(self.headerMeta.messages, id: \.author.name) {message in
-                PreviewMessageView(message: message)
+                PreviewMessageView(message: message, selectedMessage: self.$selectedMessage)
             }
         }
         .clipShape(RoundedRectangle(cornerRadius: 8.0))
@@ -36,6 +38,7 @@ struct PreviewMessageCard_Previews: PreviewProvider {
             PreviewHeaderMeta(image: Image("snoozed"),
                               category: MessageCategory.unread,
                               subtitle: "skywalker@jedi.com",
-                              imageColor: Color("Snoozed"), messages: []))
+                              imageColor: Color("Snoozed"), messages: []),
+                           selectedMessage: .constant(unreadMessages.first!))
     }
 }

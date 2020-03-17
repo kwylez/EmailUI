@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0115B9B72420710600E82FF1 /* PreviewHeaderMeta.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0115B9B62420710600E82FF1 /* PreviewHeaderMeta.swift */; };
+		0115B9D824213FFB00E82FF1 /* MessageData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0115B9D724213FFB00E82FF1 /* MessageData.swift */; };
 		01542C7D2418023A00294EA8 /* MessageCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01542C7C2418023A00294EA8 /* MessageCategory.swift */; };
 		01542C7F2418629300294EA8 /* PreviewMessageHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01542C7E2418629300294EA8 /* PreviewMessageHeaderView.swift */; };
 		01542C81241862A400294EA8 /* PreviewMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01542C80241862A400294EA8 /* PreviewMessageView.swift */; };
@@ -26,6 +27,7 @@
 
 /* Begin PBXFileReference section */
 		0115B9B62420710600E82FF1 /* PreviewHeaderMeta.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewHeaderMeta.swift; sourceTree = "<group>"; };
+		0115B9D724213FFB00E82FF1 /* MessageData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageData.swift; sourceTree = "<group>"; };
 		01542C7C2418023A00294EA8 /* MessageCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCategory.swift; sourceTree = "<group>"; };
 		01542C7E2418629300294EA8 /* PreviewMessageHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewMessageHeaderView.swift; sourceTree = "<group>"; };
 		01542C80241862A400294EA8 /* PreviewMessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewMessageView.swift; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 			children = (
 				016954BD2419DE7F00F30B6A /* Message.swift */,
 				01542C7C2418023A00294EA8 /* MessageCategory.swift */,
+				0115B9D724213FFB00E82FF1 /* MessageData.swift */,
 				0115B9B62420710600E82FF1 /* PreviewHeaderMeta.swift */,
 				016954BB2419DE7800F30B6A /* User.swift */,
 			);
@@ -211,6 +214,7 @@
 				016954BE2419DE7F00F30B6A /* Message.swift in Sources */,
 				01542C81241862A400294EA8 /* PreviewMessageView.swift in Sources */,
 				01542C7D2418023A00294EA8 /* MessageCategory.swift in Sources */,
+				0115B9D824213FFB00E82FF1 /* MessageData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
