@@ -26,7 +26,6 @@ struct PreviewMessageView: View {
                 Text(message.author.name)
                     .bold()
                 Text(message.subject)
-                    .bold()
                 Text(message.text)
                     .foregroundColor(.gray)
                     .lineLimit(1)
