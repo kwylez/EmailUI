@@ -12,14 +12,11 @@ struct ContentView: View {
     
     var body: some View {
         
-        GeometryReader {reader in
-           
-            HStack(alignment: .top, spacing: 0.0) {
-                LeftView()
-                RightView()
-            }
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
+        HStack(alignment: .top, spacing: 0.0) {
+            LeftView()
+            RightView()
         }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
     }
 }
 
