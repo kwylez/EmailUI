@@ -16,5 +16,14 @@ struct Message {
     
     let createdDate: Date
     
-    let friendlyDate: String
+    let text: String
+}
+
+extension Message {
+    
+    var friendlyDate: String {
+        
+        let formatter: RelativeDateTimeFormatter = RelativeDateTimeFormatter()
+        return formatter.localizedString(for: self.createdDate, relativeTo: Date())
+    }
 }

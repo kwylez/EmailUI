@@ -8,25 +8,31 @@
 
 import SwiftUI
 
-struct PreviewMessage: View {
+struct PreviewMessageView: View {
+    
+    var message: Message
     
     var body: some View {
         
         HStack(alignment: .top) {
 
-            Image("profile")
+            message.author.profileImage
                 .resizable()
-                .frame(width: 35.0, height: 35.0)
+                .aspectRatio(contentMode: .fit)
+                .clipShape(Circle())
+                .overlay(Circle().stroke(Color("SelectedLeftMenu"), lineWidth: 2))
+                .frame(width: 45.0, height: 45.0)
             VStack(alignment: .leading, spacing: 10.0) {
-                Text("Rio Haryanto")
+                Text(message.author.name)
                     .bold()
-                Text("Finally we made it")
+                Text(message.subject)
                     .bold()
-                Text("Hi, bung, akhirnya gw bisa masuk F!, hahaha th...")
+                Text(message.text)
                     .foregroundColor(.gray)
+                    .lineLimit(1)
             }
             Spacer()
-            Text("Yesterday")
+            Text(self.message.friendlyDate)
                 .foregroundColor(.gray)
         }
         .padding()
@@ -35,7 +41,14 @@ struct PreviewMessage: View {
 }
 
 struct PreviewMessage_Previews: PreviewProvider {
+    
     static var previews: some View {
-        PreviewMessage()
+    
+        PreviewMessageView(message:
+            Message(author:
+                User(name: "Mara Jade", profileImage: Image("profile.1")),
+                    subject: "Legends",
+                    createdDate: Date(),
+                    text: "May the Force be with you"))
     }
 }

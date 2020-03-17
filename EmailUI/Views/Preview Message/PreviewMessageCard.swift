@@ -10,19 +10,17 @@ import SwiftUI
 
 struct PreviewMessageCard: View {
     
+    var headerMeta: PreviewHeaderMeta
+    
     var body: some View {
 
-            VStack(alignment: .leading, spacing: 0) {
-    
-                PreviewMessageHeaderView(headerMeta:
-                    PreviewHeaderMeta(image: Image("unread"),
-                                      category: MessageCategory.unread,
-                                      subtitle: "skywalker@jedi.com",
-                                      imageColor: .blue)
-                )
-            
-                PreviewMessage()
-                PreviewMessage()
+        VStack(alignment: .leading, spacing: 0) {
+
+            PreviewMessageHeaderView(headerMeta: self.headerMeta)
+        
+            ForEach(self.headerMeta.messages, id: \.author.name) {message in
+                PreviewMessageView(message: message)
+            }
         }
         .clipShape(RoundedRectangle(cornerRadius: 8.0))
         .overlay(RoundedRectangle(cornerRadius: 8.0).stroke(Color.clear))
@@ -34,6 +32,10 @@ struct PreviewMessageCard: View {
 
 struct PreviewMessageCard_Previews: PreviewProvider {
     static var previews: some View {
-        PreviewMessageCard()
+        PreviewMessageCard(headerMeta:
+            PreviewHeaderMeta(image: Image("snoozed"),
+                              category: MessageCategory.unread,
+                              subtitle: "skywalker@jedi.com",
+                              imageColor: Color("Snoozed"), messages: []))
     }
 }

@@ -8,17 +8,6 @@
 
 import SwiftUI
 
-struct PreviewHeaderMeta {
-    
-    let image: Image
-    
-    let category: MessageCategory
-    
-    let subtitle: String?
-    
-    let imageColor: Color
-}
-
 struct PreviewMessageHeaderView: View {
     
     var headerMeta: PreviewHeaderMeta
@@ -54,22 +43,23 @@ struct PreviewMessageHeaderView: View {
 }
 
 struct PreviewMessageHeaderView_Previews: PreviewProvider {
-    
+
     static var previews: some View {
-        
+
         Group {
             PreviewMessageHeaderView(headerMeta:
+
                 PreviewHeaderMeta(image: Image("unread"),
                                   category: MessageCategory.unread,
                                   subtitle: "skywalker@jedi.com",
-                                  imageColor: .red)
+                                  imageColor: .red, messages: [])
             )
-            
+
             PreviewMessageHeaderView(headerMeta:
                 PreviewHeaderMeta(image: Image("unread"),
                                   category: MessageCategory.snoozed,
                                   subtitle: nil,
-                                  imageColor: .red)
+                                  imageColor: .red, messages: [])
             )
         }
     }
