@@ -23,7 +23,7 @@ struct PreviewMessageView: View {
                 .aspectRatio(contentMode: .fit)
                 .clipShape(Circle())
                 .overlay(Circle().stroke(Color("SelectedLeftMenu"), lineWidth: 2))
-                .frame(width: 45.0, height: 45.0)
+                .frame(width: 55.0, height: 55.0)
             VStack(alignment: .leading, spacing: 10.0) {
                 Text(message.author.name)
                     .bold()
