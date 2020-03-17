@@ -23,6 +23,7 @@
 		016954BC2419DE7800F30B6A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 016954BB2419DE7800F30B6A /* User.swift */; };
 		016954BE2419DE7F00F30B6A /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 016954BD2419DE7F00F30B6A /* Message.swift */; };
 		016954C2241B208900F30B6A /* MessageHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 016954C1241B208900F30B6A /* MessageHeaderView.swift */; };
+		01F10F9524216C3900C792A4 /* LeftMenuItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F10F9424216C3900C792A4 /* LeftMenuItemView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +46,7 @@
 		016954BB2419DE7800F30B6A /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		016954BD2419DE7F00F30B6A /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		016954C1241B208900F30B6A /* MessageHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageHeaderView.swift; sourceTree = "<group>"; };
+		01F10F9424216C3900C792A4 /* LeftMenuItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftMenuItemView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,10 +124,11 @@
 		016954C0241B1FEE00F30B6A /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				01542C84241862B700294EA8 /* Preview Message */,
-				016954C1241B208900F30B6A /* MessageHeaderView.swift */,
 				015915BF241178D600D7D69A /* ContentView.swift */,
+				01F10F9424216C3900C792A4 /* LeftMenuItemView.swift */,
 				015A8D412412F56900418901 /* LeftView.swift */,
+				016954C1241B208900F30B6A /* MessageHeaderView.swift */,
+				01542C84241862B700294EA8 /* Preview Message */,
 				015A8D432412F7C500418901 /* RightView.swift */,
 			);
 			path = Views;
@@ -203,6 +206,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0115B9B72420710600E82FF1 /* PreviewHeaderMeta.swift in Sources */,
+				01F10F9524216C3900C792A4 /* LeftMenuItemView.swift in Sources */,
 				015915C0241178D600D7D69A /* ContentView.swift in Sources */,
 				015915BE241178D600D7D69A /* AppDelegate.swift in Sources */,
 				015A8D422412F56900418901 /* LeftView.swift in Sources */,

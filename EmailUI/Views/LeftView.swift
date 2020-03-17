@@ -12,6 +12,8 @@ struct LeftView: View {
     
     @Binding var selectedMessage: Message
     
+    @State var selectedIndex: Int = 0
+    
     var body: some View {
         
          ZStack {
@@ -29,6 +31,7 @@ struct LeftView: View {
             HStack(alignment: .top) {
                 
                 VStack(alignment: .leading, spacing: 0) {
+                    
                     ZStack {
                         Rectangle()
                             .foregroundColor(Color("ComposeLeftMenu"))
@@ -37,62 +40,15 @@ struct LeftView: View {
                             .resizable()
                             .frame(width: 24, height: 24)
                     }
-                    ZStack {
-                        Rectangle()
-                            .foregroundColor(Color("SelectedLeftMenu"))
-                            .frame(height: 64.0)
-                        Image("menu.unread")
-                            .resizable()
-                            .frame(width: 24, height: 24)
-                    }
-                    ZStack {
-                        Rectangle()
-                            .foregroundColor(Color("UnSelectedLeftMenu"))
-                            .frame(height: 64.0)
-                        Image("menu.pin")
-                            .resizable()
-                            .frame(width: 24, height: 24)
-                    }
-                    ZStack {
-                        Rectangle()
-                            .foregroundColor(Color("UnSelectedLeftMenu"))
-                            .frame(height: 64.0)
-                        Image("menu.folder")
-                            .resizable()
-                            .frame(width: 24, height: 24)
-                    }
-                    ZStack {
-                        Rectangle()
-                            .foregroundColor(Color("UnSelectedLeftMenu"))
-                            .frame(height: 64.0)
-                        Image("menu.attachment")
-                            .resizable()
-                            .frame(width: 24, height: 24)
-                    }
-                    ZStack {
-                        Rectangle()
-                            .foregroundColor(Color("UnSelectedLeftMenu"))
-                            .frame(height: 64.0)
-                        Image("menu.snooze")
-                            .resizable()
-                            .frame(width: 24, height: 24)
-                    }
-                    ZStack {
-                        Rectangle()
-                            .foregroundColor(Color("UnSelectedLeftMenu"))
-                            .frame(height: 64.0)
-                        Image("menu.layer")
-                            .resizable()
-                            .frame(width: 24, height: 24)
-                    }
-                    ZStack {
-                        Rectangle()
-                            .foregroundColor(Color("UnSelectedLeftMenu"))
-                            .frame(height: 64.0)
-                        Image("menu.users")
-                            .resizable()
-                            .frame(width: 24, height: 24)
-                    }
+                    
+                    LeftMenuItemView(image: "menu.unread", index: 0, selectedIndex: $selectedIndex)
+                    LeftMenuItemView(image: "menu.pin", index: 1, selectedIndex: $selectedIndex)
+                    LeftMenuItemView(image: "menu.folder", index: 2, selectedIndex: $selectedIndex)
+                    LeftMenuItemView(image: "menu.attachment", index: 3, selectedIndex: $selectedIndex)
+                    LeftMenuItemView(image: "menu.snooze", index: 4, selectedIndex: $selectedIndex)
+                    LeftMenuItemView(image: "menu.layer", index: 5, selectedIndex: $selectedIndex)
+                    LeftMenuItemView(image: "menu.users", index: 6, selectedIndex: $selectedIndex)
+                    
                     Spacer()
                 }
                 .frame(width: 64.0)
