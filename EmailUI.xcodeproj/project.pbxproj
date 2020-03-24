@@ -128,8 +128,8 @@
 				01F10F9424216C3900C792A4 /* LeftMenuItemView.swift */,
 				015A8D412412F56900418901 /* LeftView.swift */,
 				016954C1241B208900F30B6A /* MessageHeaderView.swift */,
-				01542C84241862B700294EA8 /* Preview Message */,
 				015A8D432412F7C500418901 /* RightView.swift */,
+				01542C84241862B700294EA8 /* Preview Message */,
 			);
 			path = Views;
 			sourceTree = "<group>";
