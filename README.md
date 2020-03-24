@@ -9,4 +9,5 @@
 ## Overview
 
 A simple MacOS prototype to showcase using SwiftUI to create a MacOS application.
+
 ![EmailUI](Screenshots/emailui.png)
